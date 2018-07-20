@@ -118,6 +118,10 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
+    <Heading>Систематическая ошибка выжившего</Heading>
+  </Slide>,
+
+  <Slide>
     <BlockQuote fit>
       <Quote textColor="secondary" textSize="2.5rem">
         Как мы решили проблему X с помощью [длинный набор технологий]
