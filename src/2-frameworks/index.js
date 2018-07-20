@@ -7,14 +7,14 @@ import angularLogo from '../static/img/frameworks/angular.png';
 import reactLogo from '../static/img/frameworks/react.png';
 
 export const Frameworks = () => [
-  <Slide key="0">
+  <Slide>
     <Heading>Disclaimer</Heading>
     <Text>Выбор технологий — холиварная тема</Text>
   </Slide>,
-  <Slide key="1">
+  <Slide>
     <Heading fit>Компонентные фреймворки и библиотеки</Heading>
   </Slide>,
-  <Slide key="2">
+  <Slide>
     <Text>Зачем?</Text>
     <List>
       <ListItem>реиспользуемость</ListItem>
@@ -23,7 +23,7 @@ export const Frameworks = () => [
     </List>
     <Image src={composition} />
   </Slide>,
-  <Slide key="3">
+  <Slide>
     <Heading>Что общего?</Heading>
     <List>
       <Appear>
@@ -52,7 +52,7 @@ export const Frameworks = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="4">
+  <Slide>
     <Text>Различия</Text>
     <List>
       <ListItem>гибкость</ListItem>
@@ -62,10 +62,10 @@ export const Frameworks = () => [
       <ListItem>документация</ListItem>
     </List>
   </Slide>,
-  <Slide key="5">
+  <Slide>
     <Image src={angularLogo} />
   </Slide>,
-  <Slide key="6">
+  <Slide>
     <Heading fit>Почему не взяли?</Heading>
     <List>
       <Appear>
@@ -79,10 +79,10 @@ export const Frameworks = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="7">
+  <Slide>
     <Image src={reactLogo} />
   </Slide>,
-  <Slide key="10">
+  <Slide>
     <Heading fit>Почему мы выбрали?</Heading>
     <List>
       <Appear>
@@ -96,10 +96,10 @@ export const Frameworks = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="11">
+  <Slide>
     <Image src={vueLogo} />
   </Slide>,
-  <Slide key="12">
+  <Slide>
     <Heading fit>Почему стоит взглянуть?</Heading>
     <List>
       <Appear>

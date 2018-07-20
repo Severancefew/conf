@@ -23,6 +23,15 @@ const theme = createTheme(
   },
 );
 
+const slides = [
+  ...Intro(),
+  ...Frameworks(),
+  ...StateManagement(),
+  ...TypeChecking(),
+  ...Protobuf(),
+  ...Ending(),
+].map((element, idx) => ({ ...element, key: idx }));
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -32,12 +41,7 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        {Intro()}
-        {Frameworks()}
-        {StateManagement()}
-        {TypeChecking()}
-        {Protobuf()}
-        {Ending()}
+        {slides}
       </Deck>
     );
   }

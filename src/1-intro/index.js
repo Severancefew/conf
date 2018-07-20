@@ -9,6 +9,9 @@ import {
   ListItem,
   Layout,
   Fill,
+  BlockQuote,
+  Quote,
+  Cite,
 } from 'spectacle';
 
 import avatar from '../static/img/intro/photo.jpg';
@@ -16,9 +19,11 @@ import bulletTrain from '../static/img/intro/bullet_train.jpg';
 import pennywise from '../static/img/intro/pennywise.jpg';
 import pennywise_dance from '../static/img/intro/pennywise_dance.mp4';
 import t_shaped from '../static/img/intro/t-shaped.png';
+import semver from '../static/img/intro/semver.png';
+import npm from '../static/img/intro/npm.png';
 
 export const Intro = () => [
-  <Slide key="1">
+  <Slide>
     <div>
       <Heading caps fit>
         Вячеслав Минин
@@ -28,7 +33,8 @@ export const Intro = () => [
       </Heading>
     </div>
   </Slide>,
-  <Slide key="2">
+
+  <Slide>
     <Layout>
       <Fill>
         <Image margin={10} src={avatar} />
@@ -43,12 +49,13 @@ export const Intro = () => [
       </Fill>
     </Layout>
   </Slide>,
-  <Slide key="3" bgImage={bulletTrain} bgDarken={0.8}>
+
+  <Slide bgImage={bulletTrain} bgDarken={0.8}>
     <Heading textColor="primary" size={4}>
       На что похожа фронтенд разработка сейчас?
     </Heading>
   </Slide>,
-  <Slide key="4">
+  <Slide>
     <Heading size={5}>2013-2014</Heading>
     <List>
       <Appear>
@@ -62,7 +69,8 @@ export const Intro = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="5">
+
+  <Slide>
     <Heading size={5}>2015 - Хаос</Heading>
     <List>
       <Appear>
@@ -72,30 +80,57 @@ export const Intro = () => [
         <ListItem>В мае вышел Redux</ListItem>
       </Appear>
       <Appear>
+        <ListItem>React в половине тем докладов на конференциях</ListItem>
+      </Appear>
+      <Appear>
         <ListItem>В июне вышел стандарт ECMA 6</ListItem>
       </Appear>
       <Appear>
-        <ListItem>6to5 -> Babel, Traceur</ListItem>
+        <ListItem>6to5 → Babel, Traceur</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>Функциональная парадигма</ListItem>
       </Appear>
     </List>
   </Slide>,
-  <Slide key="6">
+
+  <Slide>
     <Heading size={5}>2016 - Усталость</Heading>
     <Text>
       Взрывной рост языка и экосистемы, появление кучи инструментов, библиотек и
       подходов.
     </Text>
   </Slide>,
-  <Slide key="7" bgImage={pennywise} bgDarken={0.3}>
-    <Heading>Все отлично</Heading>
+
+  <Slide bgImage={pennywise} bgDarken={0.5}>
+    <Text textColor="primary">Все отлично</Text>
   </Slide>,
-  <Slide key="8" bgColor="black">
+
+  <Slide bgColor="black">
     <video width={640} height={480} autoPlay loop src={pennywise_dance} muted />
   </Slide>,
-  <Slide key="9">
+
+  <Slide>
     <Heading size={5}>2017 - Ренессанс?</Heading>
+    <BlockQuote fit>
+      <Quote textColor="black" textSize="2.5rem">
+        Доступность, простота, динамическая природа и платформа распространения
+        JavaScript позволяет нам наблюдать новый инструмент фреймворк или
+        парадигму каждую неделю! Мы называем это "Ренессанс JavaScript"
+      </Quote>
+      <Cite>Sean T. Larkin Webpack Core team</Cite>
+    </BlockQuote>
   </Slide>,
-  <Slide key="10">
+
+  <Slide>
+    <Image src={semver} />
+  </Slide>,
+
+  <Slide>
+    <Image src={npm} />
+  </Slide>,
+
+  <Slide>
     <Heading size={5}>2018 - You are here</Heading>
     <Text>Что осталось?</Text>
     <List>
@@ -121,7 +156,8 @@ export const Intro = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="11">
+
+  <Slide>
     <Text>Что изменилось?</Text>
     <List>
       <Appear>
@@ -141,7 +177,8 @@ export const Intro = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="12">
+
+  <Slide>
     <Text>Что делать?</Text>
     <Appear>
       <Image src={t_shaped} />
@@ -155,7 +192,8 @@ export const Intro = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide key="13">
+
+  <Slide>
     <Heading>Что брать?</Heading>
     <List>
       <Appear>
