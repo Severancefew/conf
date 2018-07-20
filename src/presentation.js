@@ -5,17 +5,17 @@ import { Intro } from './1-intro';
 import { Frameworks } from './2-frameworks';
 import { StateManagement } from './3-state-management';
 import { TypeChecking } from './4-type-checking';
-import { Protobuf } from './5-protobuf';
-import { Ending } from './6-ending';
+import { Ending } from './5-ending';
 
 require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quartenary: '#03A9FC',
+    primary: '#292D3E',
+    secondary: '#FFFFFF',
+    tertiary: '#EB5171',
+    quartenary: '#ad42f4',
+    purple: '#C691E9',
   },
   {
     primary: 'Helvetica',
@@ -28,7 +28,6 @@ const slides = [
   ...Frameworks(),
   ...StateManagement(),
   ...TypeChecking(),
-  ...Protobuf(),
   ...Ending(),
 ].map((element, idx) => ({ ...element, key: idx }));
 
@@ -36,7 +35,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        progress="number"
+        progress="pacman"
         transition={['slide']}
         transitionDuration={500}
         theme={theme}

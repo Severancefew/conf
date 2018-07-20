@@ -13,14 +13,20 @@ import {
   Quote,
   Cite,
 } from 'spectacle';
+import { css } from 'react-emotion';
 
 import avatar from '../static/img/intro/photo.jpg';
 import bulletTrain from '../static/img/intro/bullet_train.jpg';
+import back_front from '../static/img/intro/frontend_backend.jpg';
 import pennywise from '../static/img/intro/pennywise.jpg';
 import pennywise_dance from '../static/img/intro/pennywise_dance.mp4';
 import t_shaped from '../static/img/intro/t-shaped.png';
 import semver from '../static/img/intro/semver.png';
-import npm from '../static/img/intro/npm.png';
+// import npm from '../static/img/intro/npm.png';
+
+const image = css`
+  width: 500px;
+`;
 
 export const Intro = () => [
   <Slide>
@@ -50,13 +56,18 @@ export const Intro = () => [
     </Layout>
   </Slide>,
 
-  <Slide bgImage={bulletTrain} bgDarken={0.8}>
-    <Heading textColor="primary" size={4}>
-      На что похожа фронтенд разработка сейчас?
-    </Heading>
-  </Slide>,
   <Slide>
-    <Heading size={5}>2013-2014</Heading>
+    <Heading fit>На что похожа фронтенд разработка сейчас?</Heading>
+  </Slide>,
+
+  <Slide>
+    <Image src={bulletTrain} />
+  </Slide>,
+
+  <Slide>
+    <Heading textColor="secondary" size={5}>
+      2013-2014
+    </Heading>
     <List>
       <Appear>
         <ListItem>2013 выходит React</ListItem>
@@ -71,13 +82,15 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading size={5}>2015 - Хаос</Heading>
+    <Heading textColor="secondary" size={5}>
+      2015 - Хаос
+    </Heading>
     <List>
       <Appear>
         <ListItem>10 разных реализаций Flux</ListItem>
       </Appear>
       <Appear>
-        <ListItem>В мае вышел Redux</ListItem>
+        <ListItem>В мае вышла 11 - Redux</ListItem>
       </Appear>
       <Appear>
         <ListItem>React в половине тем докладов на конференциях</ListItem>
@@ -95,25 +108,40 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading size={5}>2016 - Усталость</Heading>
-    <Text>
+    <Heading textColor="secondary" size={5}>
+      2016 - Усталость
+    </Heading>
+    <Text textColor="secondary">
       Взрывной рост языка и экосистемы, появление кучи инструментов, библиотек и
       подходов.
     </Text>
   </Slide>,
 
-  <Slide bgImage={pennywise} bgDarken={0.5}>
-    <Text textColor="primary">Все отлично</Text>
-  </Slide>,
-
-  <Slide bgColor="black">
-    <video width={640} height={480} autoPlay loop src={pennywise_dance} muted />
+  <Slide>
+    <BlockQuote fit>
+      <Quote textColor="secondary" textSize="2.5rem">
+        Как мы решили проблему X с помощью [длинный набор технологий]
+      </Quote>
+      <Cite>Software architect A from huge company B</Cite>
+    </BlockQuote>
   </Slide>,
 
   <Slide>
-    <Heading size={5}>2017 - Ренессанс?</Heading>
+    <Image className={image} src={back_front} />
+  </Slide>,
+
+  <Slide bgImage={pennywise} bgDarken={0.3} />,
+
+  <Slide bgColor="black">
+    <video width={800} height={600} autoPlay loop src={pennywise_dance} muted />
+  </Slide>,
+
+  <Slide>
+    <Heading textColor="secondary" size={5}>
+      2017 - Ренессанс?
+    </Heading>
     <BlockQuote fit>
-      <Quote textColor="black" textSize="2.5rem">
+      <Quote textColor="secondary" textSize="2.5rem">
         Доступность, простота, динамическая природа и платформа распространения
         JavaScript позволяет нам наблюдать новый инструмент фреймворк или
         парадигму каждую неделю! Мы называем это "Ренессанс JavaScript"
@@ -123,16 +151,20 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
+    <Heading textColor="secondary" size={3}>
+      npm
+    </Heading>
+  </Slide>,
+
+  <Slide>
     <Image src={semver} />
   </Slide>,
 
   <Slide>
-    <Image src={npm} />
-  </Slide>,
-
-  <Slide>
-    <Heading size={5}>2018 - You are here</Heading>
-    <Text>Что осталось?</Text>
+    <Heading textColor="secondary" size={5}>
+      2018 - You are here
+    </Heading>
+    <Text textColor="secondary">Что осталось?</Text>
     <List>
       <Appear>
         <ListItem>влияние корпораций на язык</ListItem>
@@ -141,10 +173,10 @@ export const Intro = () => [
         <ListItem>влияние open source сообщества</ListItem>
       </Appear>
       <Appear>
-        <ListItem>огромное количество решений</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>слабая связанность инструментов</ListItem>
+        <ListItem>
+          огромное количество решений порождает слабую взаимосвязь между
+          инструментами
+        </ListItem>
       </Appear>
       <Appear>
         <ListItem>
@@ -158,7 +190,7 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Text>Что изменилось?</Text>
+    <Text textColor="secondary">Что изменилось?</Text>
     <List>
       <Appear>
         <ListItem>tooling стал легче</ListItem>
@@ -179,7 +211,9 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Text>Что делать?</Text>
+    <Heading size={1} margin="0 0 50px 0" textColor="secondary">
+      Что делать?
+    </Heading>
     <Appear>
       <Image src={t_shaped} />
     </Appear>
@@ -194,11 +228,11 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading>Что брать?</Heading>
+    <Heading textColor="secondary">Что изучать?</Heading>
     <List>
       <Appear>
         <ListItem>
-          Фреймворк/библиотеку реализующую компонентный подход
+          Фреймворк или библиотеку реализующую компонентный подход
         </ListItem>
       </Appear>
       <Appear>

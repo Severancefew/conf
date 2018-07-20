@@ -27,15 +27,16 @@ export const TypeChecking = () => [
     </Appear>
   </Slide>,
   <Slide>
+    <Heading>Зачем нам это?</Heading>
     <List>
       <Appear>
         <ListItem>статический анализатор типов</ListItem>
       </Appear>
       <Appear>
-        <ListItem>самодокументация</ListItem>
+        <ListItem>популярность (@definitelyTyped)</ListItem>
       </Appear>
       <Appear>
-        <ListItem>популярность</ListItem>
+        <ListItem>самодокументация</ListItem>
       </Appear>
       <Appear>
         <ListItem>отличная поддержка в IDE</ListItem>
@@ -59,6 +60,34 @@ export const TypeChecking = () => [
       </Appear>
       <Appear>
         <ListItem>затраты на покрытие</ListItem>
+      </Appear>
+    </List>
+  </Slide>,
+  <Slide>
+    <Heading>Protobuf</Heading>
+    <List>
+      <Appear>
+        <ListItem>протокол сериализации</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>создан в google</ListItem>
+      </Appear>
+    </List>
+  </Slide>,
+  <Slide>
+    <Heading fit>Чем полезен?</Heading>
+    <List>
+      <Appear>
+        <ListItem>широкая поддержка языков</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>самодокументация</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>генерация typescript тайпингов</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>но нужно тащить в бандл схемы для дешифровки</ListItem>
       </Appear>
     </List>
   </Slide>,

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Slide, Appear, List, ListItem, Heading } from 'spectacle';
 
+const thatsAll = require(`../static/img/Thats_all_folks.svg`);
+
 export const Ending = () => [
   <Slide>
     <Heading>Тезисы</Heading>
@@ -22,7 +24,5 @@ export const Ending = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide>
-    <Heading>Thats it folks</Heading>
-  </Slide>,
+  <Slide bgImage={thatsAll} />,
 ];

@@ -1,15 +1,30 @@
 import React from 'react';
-import { Slide, Heading, List, ListItem, Appear, Text, Image } from 'spectacle';
+import {
+  Slide,
+  Heading,
+  List,
+  ListItem,
+  Appear,
+  Text as SpectacleText,
+  Image,
+} from 'spectacle';
+
+import styled from 'react-emotion';
 
 import composition from '../static/img/frameworks/composition.png';
-import vueLogo from '../static/img/frameworks/vue.png';
+import vueLogo from '../static/img/frameworks/vue.svg';
 import angularLogo from '../static/img/frameworks/angular.png';
 import reactLogo from '../static/img/frameworks/react.png';
 
+const Text = styled(SpectacleText)`
+  color: white;
+`;
+
 export const Frameworks = () => [
   <Slide>
-    <Heading>Disclaimer</Heading>
-    <Text>Выбор технологий — холиварная тема</Text>
+    <Heading fit textColor="tertiary">
+      Выбор технологий — холиварная тема
+    </Heading>
   </Slide>,
   <Slide>
     <Heading fit>Компонентные фреймворки и библиотеки</Heading>
@@ -24,7 +39,7 @@ export const Frameworks = () => [
     <Image src={composition} />
   </Slide>,
   <Slide>
-    <Heading>Что общего?</Heading>
+    <Heading textColor="secondary">Что общего?</Heading>
     <List>
       <Appear>
         <ListItem>поддерживает большая компания</ListItem>
@@ -39,9 +54,6 @@ export const Frameworks = () => [
         <ListItem>быстрое развертывание</ListItem>
       </Appear>
       <Appear>
-        <ListItem>server-side rendering</ListItem>
-      </Appear>
-      <Appear>
         <ListItem>инструменты / поддержка IDE</ListItem>
       </Appear>
       <Appear>
@@ -53,7 +65,7 @@ export const Frameworks = () => [
     </List>
   </Slide>,
   <Slide>
-    <Text>Различия</Text>
+    <Heading textColor="secondary">Различия</Heading>
     <List>
       <ListItem>гибкость</ListItem>
       <ListItem>навязывает архитектуру</ListItem>
@@ -66,7 +78,9 @@ export const Frameworks = () => [
     <Image src={angularLogo} />
   </Slide>,
   <Slide>
-    <Heading fit>Почему не взяли?</Heading>
+    <Heading textColor="secondary" fit>
+      Почему не взяли?
+    </Heading>
     <List>
       <Appear>
         <ListItem>кривая обучения</ListItem>
@@ -86,7 +100,7 @@ export const Frameworks = () => [
     <Heading fit>Почему мы выбрали?</Heading>
     <List>
       <Appear>
-        <ListItem>только view слой</ListItem>
+        <ListItem>только слой представления</ListItem>
       </Appear>
       <Appear>
         <ListItem>огромная экосистема</ListItem>

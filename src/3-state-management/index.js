@@ -11,16 +11,16 @@ export const StateManagement = () => [
   <Slide>
     <Heading>Организация состояния</Heading>
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={state_1} />
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={state_2} />
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={state_3} />
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={reduxLogo} />
   </Slide>,
   <Slide>
@@ -55,7 +55,7 @@ export const StateManagement = () => [
     </List>
   </Slide>,
   <Slide>
-    <Heading size={3}>Минусы</Heading>
+    <Heading textColor="tertiary">Минусы</Heading>
     <List>
       <Appear>
         <ListItem>кривая обучения</ListItem>
