@@ -1,0 +1,2 @@
+<Button theme="warning" text="Hello world" />
+<Button theme="primary" onClick={increment} />

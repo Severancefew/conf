@@ -7,10 +7,15 @@ import {
   Appear,
   Text as SpectacleText,
   Image,
+  CodePane,
 } from 'spectacle';
 import { Button } from '@alicantoio/ui-kit';
+import { ButtonPlayGround } from './ButtonPlayground';
 
 import styled from 'react-emotion';
+
+// eslint-disable-next-line
+import reactExample from '!raw-loader!./react.example';
 
 import composition from '../static/img/frameworks/composition.png';
 import vueLogo from '../static/img/frameworks/vue.svg';
@@ -40,12 +45,19 @@ export const Frameworks = () => [
     <Image src={composition} />
   </Slide>,
   <Slide>
-    <div>
+    <Text margin="0 0 50px 0" textColor="tertiary">
+      Как пример
+    </Text>
+    <CodePane
+      margin="0 0 50px 0"
+      textSize="2rem"
+      bgColor="#292D3E"
+      source={reactExample}
+    />
+    <div style={{ marginBottom: 10 }}>
       <Button theme="warning" text="Hello world" />
     </div>
-    <div>
-      <Button theme="ordinary" text="Test" />
-    </div>
+    <ButtonPlayGround />
   </Slide>,
   <Slide>
     <Heading textColor="secondary">Что общего?</Heading>

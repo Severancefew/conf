@@ -8,9 +8,16 @@ import {
   ListItem,
   CodePane,
 } from 'spectacle';
+// eslint-disable-next-line
+import protoExample from '!raw-loader!./protobuf.example';
+// eslint-disable-next-line
+import typescriptExample from '!raw-loader!./typescript.example';
+// eslint-disable-next-line
+import typescriptExample2 from '!raw-loader!./typescript2.example';
 
 const nan_joke = require(`../static/img/type-check/nan_joke.jpg`);
 const typescript_bg = require(`../static/img/type-check/typescript_bg.png`);
+const typescript_error = require(`../static/img/type-check/typescript_error.png`);
 
 export const TypeChecking = () => [
   <Slide>
@@ -34,12 +41,29 @@ export const TypeChecking = () => [
       <Image width={456} height={495} src={nan_joke} />
     </Appear>
   </Slide>,
+
+  <Slide>
+    1<CodePane
+      lang="typescript"
+      textSize="1.3rem"
+      bgColor="#292D3E"
+      source={typescriptExample}
+    />
+    <Image src={typescript_error} />
+  </Slide>,
+
+  <Slide>
+    <CodePane
+      lang="typescript"
+      textSize="1.3rem"
+      bgColor="#292D3E"
+      source={typescriptExample2}
+    />
+  </Slide>,
+
   <Slide>
     <Heading>Зачем нам это?</Heading>
     <List>
-      <Appear>
-        <ListItem>статический анализатор типов</ListItem>
-      </Appear>
       <Appear>
         <ListItem>
           популярность (4600+ типизированных библиотек @definitelyTyped)
@@ -50,6 +74,9 @@ export const TypeChecking = () => [
       </Appear>
       <Appear>
         <ListItem>отличная поддержка в IDE</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>меняет стиль написания кода</ListItem>
       </Appear>
     </List>
   </Slide>,
@@ -84,6 +111,11 @@ export const TypeChecking = () => [
       </Appear>
     </List>
   </Slide>,
+
+  <Slide>
+    <CodePane textSize="2rem" bgColor="#292D3E" source={protoExample} />
+  </Slide>,
+
   <Slide>
     <Heading fit>Чем полезен?</Heading>
     <List>
@@ -100,13 +132,5 @@ export const TypeChecking = () => [
         <ListItem>но нужно тащить в бандл схемы для дешифровки</ListItem>
       </Appear>
     </List>
-  </Slide>,
-  <Slide>
-    <CodePane>{`
-      message Person {
-        required string name = 1;
-        required int32 id = 2;
-        optional string email = 3;
-      }`}</CodePane>
   </Slide>,
 ];

@@ -1,0 +1,10 @@
+export interface IButtonProps {
+    text?: string;
+    size?: 'small' | 'medium' | 'big' | 'small-auto';
+    theme?: 'ordinary' | 'primary' | 'attention' | 'warning' | 'gray';
+    type?: string;
+    className?: string;
+    onClick?: React.FormEventHandler<HTMLButtonElement>;
+    filled?: boolean;
+    disabled?: boolean;
+}
