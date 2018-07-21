@@ -18,10 +18,15 @@ import typescriptExample2 from '!raw-loader!./typescript2.example';
 const nan_joke = require(`../static/img/type-check/nan_joke.jpg`);
 const typescript_bg = require(`../static/img/type-check/typescript_bg.png`);
 const typescript_error = require(`../static/img/type-check/typescript_error.png`);
+const type_joke = require(`../static/img/type-check/type_joke.jpg`);
 
 export const TypeChecking = () => [
   <Slide>
     <Heading>Проверка типов</Heading>
+  </Slide>,
+
+  <Slide>
+    <Image src={type_joke} />
   </Slide>,
   <Slide bgImage={typescript_bg} />,
   <Slide>
@@ -43,7 +48,7 @@ export const TypeChecking = () => [
   </Slide>,
 
   <Slide>
-    1<CodePane
+    <CodePane
       lang="typescript"
       textSize="1.3rem"
       bgColor="#292D3E"
