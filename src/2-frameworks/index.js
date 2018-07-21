@@ -8,6 +8,7 @@ import {
   Text as SpectacleText,
   Image,
 } from 'spectacle';
+import { Button } from '@alicantoio/ui-kit';
 
 import styled from 'react-emotion';
 
@@ -37,6 +38,14 @@ export const Frameworks = () => [
       <ListItem>декларативность</ListItem>
     </List>
     <Image src={composition} />
+  </Slide>,
+  <Slide>
+    <div>
+      <Button theme="warning" text="Hello world" />
+    </div>
+    <div>
+      <Button theme="ordinary" text="Test" />
+    </div>
   </Slide>,
   <Slide>
     <Heading textColor="secondary">Что общего?</Heading>

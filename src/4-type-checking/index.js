@@ -1,5 +1,13 @@
 import React from 'react';
-import { Slide, Image, Heading, Appear, List, ListItem } from 'spectacle';
+import {
+  Slide,
+  Image,
+  Heading,
+  Appear,
+  List,
+  ListItem,
+  CodePane,
+} from 'spectacle';
 
 const nan_joke = require(`../static/img/type-check/nan_joke.jpg`);
 const typescript_bg = require(`../static/img/type-check/typescript_bg.png`);
@@ -23,7 +31,7 @@ export const TypeChecking = () => [
   <Slide>
     <Heading>Зачем нам это?</Heading>
     <Appear>
-      <Image src={nan_joke} />
+      <Image width={456} height={495} src={nan_joke} />
     </Appear>
   </Slide>,
   <Slide>
@@ -33,7 +41,9 @@ export const TypeChecking = () => [
         <ListItem>статический анализатор типов</ListItem>
       </Appear>
       <Appear>
-        <ListItem>популярность (@definitelyTyped)</ListItem>
+        <ListItem>
+          популярность (4600+ типизированных библиотек @definitelyTyped)
+        </ListItem>
       </Appear>
       <Appear>
         <ListItem>самодокументация</ListItem>
@@ -90,5 +100,13 @@ export const TypeChecking = () => [
         <ListItem>но нужно тащить в бандл схемы для дешифровки</ListItem>
       </Appear>
     </List>
+  </Slide>,
+  <Slide>
+    <CodePane>{`
+      message Person {
+        required string name = 1;
+        required int32 id = 2;
+        optional string email = 3;
+      }`}</CodePane>
   </Slide>,
 ];

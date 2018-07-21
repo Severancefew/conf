@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@alicantoio/ui-kit": "0.0.9",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "spectacle-image-slide": "^1.0.1",
@@ -15,6 +16,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "raw-loader": "^0.5.1"
   }
 }

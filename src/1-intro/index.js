@@ -215,7 +215,7 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading size={1} margin="0 0 50px 0" textColor="secondary">
+    <Heading size={2} margin="0 0 50px 0" textColor="secondary">
       Что делать?
     </Heading>
     <Appear>
