@@ -189,6 +189,7 @@ export const Intro = () => [
   <Slide>
     <Text textColor="secondary">Что изменилось?</Text>
     <List>
+      <ListItem>фокус на быстродействии, доступности, безопасности</ListItem>
       <ListItem>инструменты стали круче и легче</ListItem>
       <ListItem>PWA уже не просто рекоммендация</ListItem>
       <ListItem>ждем популярности WASM</ListItem>
@@ -213,16 +214,14 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading textColor="secondary">Что изучать?</Heading>
+    <Heading textColor="secondary" fit>
+      За чем поглядывать?
+    </Heading>
     <List>
-      <Appear>
-        <ListItem>
-          Фреймворк или библиотеку реализующую компонентный подход
-        </ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>State management</ListItem>
-      </Appear>
+      <ListItem>
+        Фреймворк или библиотеку реализующую компонентный подход
+      </ListItem>
+      <ListItem>State management</ListItem>
     </List>
   </Slide>,
 ];
