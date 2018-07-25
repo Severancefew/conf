@@ -22,6 +22,9 @@ import pennywise_dance from '../static/img/intro/pennywise_dance.mp4';
 import t_shaped from '../static/img/intro/t-shaped.png';
 import semver from '../static/img/intro/semver.png';
 
+import npm_joke from '../static/img/intro/npm_joke.jpg';
+import npm_stats from '../static/img/intro/npm.png';
+
 const image = css`
   width: 500px;
 `;
@@ -145,10 +148,10 @@ export const Intro = () => [
     </BlockQuote>
   </Slide>,
 
+  <Slide bgImage={npm_joke} />,
+
   <Slide>
-    <Heading textColor="secondary" size={3}>
-      npm
-    </Heading>
+    <Image src={npm_stats} />
   </Slide>,
 
   <Slide>
@@ -215,7 +218,7 @@ export const Intro = () => [
 
   <Slide>
     <Heading textColor="secondary" fit>
-      За чем поглядывать?
+      За чем посматривать?
     </Heading>
     <List>
       <ListItem>

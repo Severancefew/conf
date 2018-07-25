@@ -1,6 +1,7 @@
 {
   "name": "conf",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@alicantoio/ui-kit": "0.0.9",

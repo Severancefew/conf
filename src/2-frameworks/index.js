@@ -91,6 +91,7 @@ export const Frameworks = () => [
     <List>
       <ListItem>полноценное решение</ListItem>
       <ListItem>статическая типизация</ListItem>
+      <ListItem>обширная документация</ListItem>
     </List>
   </Slide>,
   <Slide>
@@ -144,7 +145,7 @@ export const Frameworks = () => [
     code={slidesExample}
     ranges={[
       {
-        loc: [0, 6],
+        loc: [0, 7],
         title: 'Презентация на React',
       },
     ]}

@@ -1,4 +1,5 @@
 <Slide>
+  <Heading>Минусы</Heading>
   <List>
     <ListItem>сильно завязан на js</ListItem>
     <ListItem>JSX</ListItem>
