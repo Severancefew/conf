@@ -1,11 +1,17 @@
 import React from 'react';
 import { Slide, Heading, Image, List, ListItem, Appear } from 'spectacle';
+import CodeSlide from 'spectacle-code-slide';
 
 import mobxLogo from '../static/img/state-management/mobx_logo.png';
 import reduxLogo from '../static/img/state-management/redux_logo.png';
 import state_1 from '../static/img/state-management/1.png';
 import state_2 from '../static/img/state-management/2.png';
 import state_3 from '../static/img/state-management/3.png';
+
+// eslint-disable-next-line
+import mobxFirst from '!raw-loader!./mobx.example';
+// eslint-disable-next-line
+import mobxSecond from '!raw-loader!./mobx_2.example';
 
 export const StateManagement = () => [
   <Slide>
@@ -74,4 +80,28 @@ export const StateManagement = () => [
       Mobx
     </Heading>
   </Slide>,
+  <CodeSlide
+    color="white"
+    transition={[]}
+    lang="ts"
+    code={mobxFirst}
+    ranges={[
+      { loc: [1, 2], title: 'Помечаете данные' },
+      { loc: [3, 7], title: 'Описываете действия' },
+      { loc: [9, 12], title: 'Подключаете к компоненту' },
+    ]}
+  />,
+  <CodeSlide
+    color="white"
+    transition={[]}
+    lang="ts"
+    code={mobxSecond}
+    ranges={[
+      { loc: [1, 3] },
+      { loc: [11, 12] },
+      { loc: [20, 23] },
+      { loc: [24, 29] },
+      { loc: [32, 35] },
+    ]}
+  />,
 ];

@@ -8,6 +8,8 @@
     "public": false,
     "node_modules": false,
     "*.*": false,
-    "src/*.*": false
+    "src/*.*": false,
+    "config": false,
+    "scripts": false
   }
 }

@@ -1,0 +1,68 @@
+export const fetchTodosRequest = () => ({
+  type: 'FETCH_TODOS_REQUEST',
+});
+
+export const fetchTodosSuccess = todos => ({
+  type: 'FETCH_TODOS_SUCCESS',
+  payload: todos,
+});
+
+export const fetchTodosFailure = error => ({
+  type: 'FETCH_TODOS_FAILURE',
+  payload: error,
+});
+
+export const fetchTodos = async () => dispatch => {
+  dispatch(fetchTodosRequest());
+
+  try {
+    const response = await api.get('/api/todos');
+    const {status,todoList} = await response.json();
+    
+    if(status === 200){
+      return dispatch(fetchTodosSuccess(todoList));
+    }
+
+    dispatch(fetchTodosFailure(body));
+  } catch (e) {
+    dispatch(fetchTodosFailure(e));
+  }
+};
+
+const initialState = {
+  todoList: [],
+  todoValue: '',
+};
+
+export const todoReducer = (state = initialState, aciton) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return {
+        ...state,
+        todoList: [...state.todoList, { name: state.todoValue, done: false }],
+        todoValue: '',
+      };
+  }
+};
+
+function mapStateToProps(state) {
+  return {
+    todoList: state.todoList,
+  };
+}
+
+function mapDispatchToProps(dipsatch) {
+  return {
+    addTodo(todo) {
+      dispatch(addTodo(todo));
+    },
+    fetchTodos(){
+      dispatch(fetchTodos());
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Component);

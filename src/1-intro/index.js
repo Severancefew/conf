@@ -18,7 +18,7 @@ import { css } from 'react-emotion';
 import avatar from '../static/img/intro/photo.jpg';
 import bulletTrain from '../static/img/intro/bullet_train.jpg';
 import back_front from '../static/img/intro/frontend_backend.jpg';
-import pennywise from '../static/img/intro/pennywise.jpg';
+// import pennywise from '../static/img/intro/pennywise.jpg';
 import pennywise_dance from '../static/img/intro/pennywise_dance.mp4';
 import t_shaped from '../static/img/intro/t-shaped.png';
 import semver from '../static/img/intro/semver.png';
@@ -101,9 +101,6 @@ export const Intro = () => [
       <Appear>
         <ListItem>6to5 → Babel, Traceur</ListItem>
       </Appear>
-      <Appear>
-        <ListItem>Функциональная парадигма</ListItem>
-      </Appear>
     </List>
   </Slide>,
 
@@ -133,8 +130,6 @@ export const Intro = () => [
   <Slide>
     <Image className={image} src={back_front} />
   </Slide>,
-
-  <Slide bgImage={pennywise} bgDarken={0.3} />,
 
   <Slide bgColor="black">
     <video width={800} height={600} autoPlay loop src={pennywise_dance} muted />
@@ -171,6 +166,9 @@ export const Intro = () => [
     <Text textColor="secondary">Что осталось?</Text>
     <List>
       <Appear>
+        <ListItem>JS все еще самый дорогой ресурс в приложении</ListItem>
+      </Appear>
+      <Appear>
         <ListItem>влияние корпораций на язык</ListItem>
       </Appear>
       <Appear>
@@ -178,8 +176,7 @@ export const Intro = () => [
       </Appear>
       <Appear>
         <ListItem>
-          огромное количество решений порождает слабую взаимосвязь между
-          инструментами
+          огромное количество решений порождает слабую взаимосвязь
         </ListItem>
       </Appear>
       <Appear>
@@ -196,21 +193,9 @@ export const Intro = () => [
   <Slide>
     <Text textColor="secondary">Что изменилось?</Text>
     <List>
-      <Appear>
-        <ListItem>tooling стал легче</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>инструменты стали круче</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>единый codestyle</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>полная поддержка ES6 всеми современными браузерами</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>PWA уже не просто рекоммендация</ListItem>
-      </Appear>
+      <ListItem>инструменты стали круче и легче</ListItem>
+      <ListItem>PWA уже не просто рекоммендация</ListItem>
+      <ListItem>ждем популярности WASM</ListItem>
     </List>
   </Slide>,
 

@@ -1,0 +1,35 @@
+class TodoStore {
+  @observable todoList = null;
+  @observbale loadingState = false;
+
+  @action
+  addTodo(todo) {
+    this.todoList.push(todo);
+  }
+
+  @action
+  fetchTodos() {
+    this.loadingState = true;
+
+    try {
+      const response = await api
+        .get('/api/todos');
+        
+      const {status,todoList} = await response
+        .json();
+      
+      if(body.status === 200){
+        this.todoList = todoList;
+      }
+  
+      this.loadingState = false;
+    } catch (e) {
+      this.loadingState = false;
+      // TODO: Manage Errors
+    }
+  }
+}
+
+@inject('todoStore')
+@observer
+class TodoList extends React.Component {}

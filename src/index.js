@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import Presentation from './presentation';
 import registerServiceWorker from './registerServiceWorker';
 
+import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs';
+
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-jsx';
+
 ReactDOM.render(<Presentation />, document.getElementById('root'));
 
 if (module.hot) {

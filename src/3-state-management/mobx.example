@@ -1,0 +1,12 @@
+class TodoStore {
+  @observable todoList = [];
+
+  @action
+  addTodo(todo) {
+    this.todoList.push(todo);
+  }
+}
+
+@inject(state => state.todoStore)
+@observer
+class TodoList extends React.Component {}

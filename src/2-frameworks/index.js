@@ -16,6 +16,8 @@ import styled from 'react-emotion';
 
 // eslint-disable-next-line
 import reactExample from '!raw-loader!./react.example';
+// eslint-disable-next-line
+import slidesExample from '!raw-loader!./slides.example';
 
 import composition from '../static/img/frameworks/composition.png';
 import vueLogo from '../static/img/frameworks/vue.svg';
@@ -31,9 +33,6 @@ export const Frameworks = () => [
     <Heading fit textColor="tertiary">
       Выбор технологий — холиварная тема
     </Heading>
-  </Slide>,
-  <Slide>
-    <Heading fit>Компонентные фреймворки и библиотеки</Heading>
   </Slide>,
   <Slide>
     <Text>Зачем?</Text>
@@ -99,6 +98,12 @@ export const Frameworks = () => [
     <Image src={angularLogo} />
   </Slide>,
   <Slide>
+    <List>
+      <ListItem>полноценное решение</ListItem>
+      <ListItem>статическая типизация</ListItem>
+    </List>
+  </Slide>,
+  <Slide>
     <Heading textColor="secondary" fit>
       Почему не взяли?
     </Heading>
@@ -110,7 +115,10 @@ export const Frameworks = () => [
         <ListItem>монолит</ListItem>
       </Appear>
       <Appear>
-        <ListItem>завязан на typescript и декораторы</ListItem>
+        <ListItem>завязан на typescript</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>декораторы</ListItem>
       </Appear>
     </List>
   </Slide>,
@@ -128,6 +136,20 @@ export const Frameworks = () => [
       </Appear>
       <Appear>
         <ListItem>гибкость</ListItem>
+      </Appear>
+    </List>
+  </Slide>,
+  <Slide>
+    <List>
+      <ListItem>сильно завязан на js</ListItem>
+      <ListItem>JSX</ListItem>
+      <Appear>
+        <CodePane
+          margin="50px 0 50px 0"
+          textSize="2rem"
+          bgColor="#292D3E"
+          source={slidesExample}
+        />
       </Appear>
     </List>
   </Slide>,
