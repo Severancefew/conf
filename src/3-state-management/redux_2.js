@@ -36,11 +36,22 @@ const initialState = {
 
 export const todoReducer = (state = initialState, aciton) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case 'FETCH_TODOS_REQUEST':
       return {
         ...state,
-        todoList: [...state.todoList, { name: state.todoValue, done: false }],
-        todoValue: '',
+        isLoading: true
+      };
+    case 'FETCH_TODOS_SUCCESS':
+      return {
+        ...state,
+        todoList: action.payload,
+        isLoading: false
+      };
+    case 'FETCH_TODOS_FAILURE':
+      return {
+        ...state,
+        error: action.payload,
+        isLoading: false
       };
   }
 };

@@ -9,6 +9,8 @@ import state_2 from '../static/img/state-management/2.png';
 import state_3 from '../static/img/state-management/3.png';
 
 // eslint-disable-next-line
+import reduxFirst from '!raw-loader!./redux.example';
+// eslint-disable-next-line
 import mobxFirst from '!raw-loader!./mobx.example';
 // eslint-disable-next-line
 import mobxSecond from '!raw-loader!./mobx_2.example';
@@ -74,6 +76,19 @@ export const StateManagement = () => [
       </Appear>
     </List>
   </Slide>,
+  <CodeSlide
+    color="white"
+    transition={[]}
+    lang="ts"
+    code={reduxFirst}
+    ranges={[
+      { loc: [0, 3], title: 'Пишем action' },
+      { loc: [4, 8], title: 'Описываем начальное состояние' },
+      { loc: [11, 23] },
+      { loc: [26, 31] },
+      { loc: [32, 36] },
+    ]}
+  />,
   <Slide>
     <Image width={400} height={400} src={mobxLogo} />
     <Heading textColor="black" caps>

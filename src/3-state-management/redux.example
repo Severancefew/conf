@@ -12,7 +12,13 @@ export const todoReducer = (state = initialState, aciton) => {
     case 'ADD_TODO':
       return {
         ...state,
-        todoList: [...state.todoList, { name: state.todoValue, done: false }],
+        todoList: [
+          ...state.todoList,
+           { 
+             name: state.todoValue,
+              done: false
+            }
+        ],
         todoValue: '',
       };
   }

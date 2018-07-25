@@ -8,6 +8,8 @@ import {
   ListItem,
   CodePane,
 } from 'spectacle';
+import CodeSlide from 'spectacle-code-slide';
+
 // eslint-disable-next-line
 import protoExample from '!raw-loader!./protobuf.example';
 // eslint-disable-next-line
@@ -47,23 +49,16 @@ export const TypeChecking = () => [
     </Appear>
   </Slide>,
 
-  <Slide>
-    <CodePane
-      lang="typescript"
-      textSize="1.3rem"
-      bgColor="#292D3E"
-      source={typescriptExample}
-    />
-    <Image src={typescript_error} />
-  </Slide>,
+  <CodeSlide
+    color="white"
+    transition={[]}
+    lang="ts"
+    code={typescriptExample}
+    ranges={[]}
+  />,
 
   <Slide>
-    <CodePane
-      lang="typescript"
-      textSize="1.3rem"
-      bgColor="#292D3E"
-      source={typescriptExample2}
-    />
+    <Image src={typescript_error} />
   </Slide>,
 
   <Slide>
