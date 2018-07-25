@@ -23,6 +23,8 @@ const typescript_bg = require(`../static/img/type-check/typescript_bg.png`);
 const typescript_error = require(`../static/img/type-check/typescript_error.png`);
 const type_joke = require(`../static/img/type-check/type_joke.jpg`);
 
+const old_websites = require(`../static/img/type-check/old_websites.mp4`);
+
 export const TypeChecking = () => [
   <Slide>
     <Heading>Проверка типов</Heading>
@@ -44,6 +46,10 @@ export const TypeChecking = () => [
     <Appear>
       <Image width={456} height={495} src={nan_joke} />
     </Appear>
+  </Slide>,
+
+  <Slide>
+    <video width={800} height={600} autoPlay loop src={old_websites} muted />
   </Slide>,
 
   <CodeSlide
