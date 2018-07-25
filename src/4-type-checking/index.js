@@ -71,20 +71,12 @@ export const TypeChecking = () => [
   <Slide>
     <Heading>Зачем нам это?</Heading>
     <List>
-      <Appear>
-        <ListItem>
-          популярность (4600+ типизированных библиотек @definitelyTyped)
-        </ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>самодокументация</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>отличная поддержка в IDE</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>меняет стиль написания кода</ListItem>
-      </Appear>
+      <ListItem>
+        популярность (4600+ типизированных библиотек @definitelyTyped)
+      </ListItem>
+      <ListItem>самодокументация</ListItem>
+      <ListItem>отличная поддержка в IDE</ListItem>
+      <ListItem>меняет стиль написания кода</ListItem>
     </List>
   </Slide>,
   <Slide>
