@@ -18,11 +18,9 @@ import { css } from 'react-emotion';
 import avatar from '../static/img/intro/photo.jpg';
 import bulletTrain from '../static/img/intro/bullet_train.jpg';
 import back_front from '../static/img/intro/frontend_backend.jpg';
-// import pennywise from '../static/img/intro/pennywise.jpg';
 import pennywise_dance from '../static/img/intro/pennywise_dance.mp4';
 import t_shaped from '../static/img/intro/t-shaped.png';
 import semver from '../static/img/intro/semver.png';
-// import npm from '../static/img/intro/npm.png';
 
 const image = css`
   width: 500px;
@@ -47,9 +45,7 @@ export const Intro = () => [
       </Fill>
       <Fill>
         <List>
-          <ListItem>
-            Фронтенд инженер в <em>SBrains</em>
-          </ListItem>
+          <ListItem>Фронтенд инженер</ListItem>
           <ListItem>Занимаюсь разработкой с 2014</ListItem>
         </List>
       </Fill>
@@ -115,7 +111,7 @@ export const Intro = () => [
   </Slide>,
 
   <Slide>
-    <Heading>Систематическая ошибка выжившего</Heading>
+    <Heading fit>Систематическая ошибка выжившего</Heading>
   </Slide>,
 
   <Slide>

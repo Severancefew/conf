@@ -14,7 +14,7 @@ export const Ending = () => [
         <ListItem>инструменты должны приносить пользу</ListItem>
       </Appear>
       <Appear>
-        <ListItem>обсуждайте</ListItem>
+        <ListItem>обсуждайте, предлагайте, делегируйте</ListItem>
       </Appear>
       <Appear>
         <ListItem>не бойтесь пробовать новое</ListItem>

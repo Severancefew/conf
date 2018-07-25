@@ -15,9 +15,9 @@ export const todoReducer = (state = initialState, aciton) => {
         todoList: [
           ...state.todoList,
            { 
-             name: state.todoValue,
-              done: false
-            }
+            name: state.todoValue,
+            done: false
+           }
         ],
         todoValue: '',
       };

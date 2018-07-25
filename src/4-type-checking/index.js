@@ -7,6 +7,7 @@ import {
   List,
   ListItem,
   CodePane,
+  Text,
 } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 
@@ -34,12 +35,8 @@ export const TypeChecking = () => [
   <Slide>
     <Heading>Что это?</Heading>
     <List>
-      <Appear>
-        <ListItem>надстройка над Javascript</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>создан в Microsoft</ListItem>
-      </Appear>
+      <ListItem>надстройка над Javascript</ListItem>
+      <ListItem>создан в Microsoft</ListItem>
     </List>
   </Slide>,
   <Slide>
@@ -54,7 +51,11 @@ export const TypeChecking = () => [
     transition={[]}
     lang="ts"
     code={typescriptExample}
-    ranges={[]}
+    ranges={[
+      {
+        loc: [0, 3],
+      },
+    ]}
   />,
 
   <Slide>
@@ -101,14 +102,10 @@ export const TypeChecking = () => [
     </List>
   </Slide>,
   <Slide>
-    <Heading>Protobuf</Heading>
+    <Heading>Bonus: Protobuf</Heading>
     <List>
-      <Appear>
-        <ListItem>протокол сериализации</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>создан в google</ListItem>
-      </Appear>
+      <ListItem>протокол сериализации</ListItem>
+      <ListItem>создан в google</ListItem>
     </List>
   </Slide>,
 
@@ -119,18 +116,14 @@ export const TypeChecking = () => [
   <Slide>
     <Heading fit>Чем полезен?</Heading>
     <List>
-      <Appear>
-        <ListItem>широкая поддержка языков</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>самодокументация</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>генерация typescript тайпингов</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>но нужно тащить в бандл схемы для дешифровки</ListItem>
-      </Appear>
+      <ListItem>широкая поддержка языков</ListItem>
+      <ListItem>самодокументация</ListItem>
+      <ListItem>генерация typescript тайпингов</ListItem>
     </List>
+    <Appear>
+      <Text textColor="white">
+        но нужно тащить в бандл схемы для дешифровки
+      </Text>
+    </Appear>
   </Slide>,
 ];

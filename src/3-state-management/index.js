@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slide, Heading, Image, List, ListItem, Appear } from 'spectacle';
+import { Slide, Heading, Image, List, ListItem } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 
 import mobxLogo from '../static/img/state-management/mobx_logo.png';
@@ -10,6 +10,8 @@ import state_3 from '../static/img/state-management/3.png';
 
 // eslint-disable-next-line
 import reduxFirst from '!raw-loader!./redux.example';
+// eslint-disable-next-line
+import reduxSecond from '!raw-loader!./redux_2.example';
 // eslint-disable-next-line
 import mobxFirst from '!raw-loader!./mobx.example';
 // eslint-disable-next-line
@@ -34,46 +36,26 @@ export const StateManagement = () => [
   <Slide>
     <Heading fit>Ключевые принципы</Heading>
     <List>
-      <Appear>
-        <ListItem>один источник данных</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>только для чтения</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>изменения производятся с помощью чистых функций</ListItem>
-      </Appear>
+      <ListItem>один источник данных</ListItem>
+      <ListItem>только для чтения</ListItem>
+      <ListItem>изменения производятся с помощью чистых функций</ListItem>
     </List>
   </Slide>,
   <Slide>
     <Heading fit>Позитивные стороны</Heading>
     <List>
-      <Appear>
-        <ListItem>предсказуемое поведение</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>огромное сообщество</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>куча учебного материала</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>инструменты разработчика</ListItem>
-      </Appear>
+      <ListItem>предсказуемое поведение</ListItem>
+      <ListItem>огромное сообщество</ListItem>
+      <ListItem>куча учебного материала</ListItem>
+      <ListItem>инструменты разработчика</ListItem>
     </List>
   </Slide>,
   <Slide>
     <Heading textColor="tertiary">Минусы</Heading>
     <List>
-      <Appear>
-        <ListItem>кривая обучения</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>boilerplate code</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>нужна экосистема</ListItem>
-      </Appear>
+      <ListItem>кривая обучения</ListItem>
+      <ListItem>boilerplate code</ListItem>
+      <ListItem>нужна экосистема</ListItem>
     </List>
   </Slide>,
   <CodeSlide
@@ -89,7 +71,29 @@ export const StateManagement = () => [
       { loc: [32, 36] },
     ]}
   />,
-  <Slide>
+  <CodeSlide
+    color="white"
+    transition={[]}
+    lang="ts"
+    code={reduxSecond}
+    ranges={[
+      { loc: [0, 4], title: 'Пишем actions' },
+      { loc: [5, 10] },
+      { loc: [11, 16] },
+      { loc: [17, 18] },
+      { loc: [18, 19] },
+      { loc: [27, 30] },
+      { loc: [32, 35] },
+      { loc: [36, 39] },
+      { loc: [52, 57] },
+      { loc: [57, 63] },
+      { loc: [63, 69] },
+      { loc: [72, 77] },
+      { loc: [83, 86] },
+      { loc: [89, 93] },
+    ]}
+  />,
+  <Slide bgColor="white">
     <Image width={400} height={400} src={mobxLogo} />
     <Heading textColor="black" caps>
       Mobx

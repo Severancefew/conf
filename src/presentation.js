@@ -13,7 +13,7 @@ const theme = createTheme(
   {
     primary: '#292D3E',
     secondary: '#FFFFFF',
-    tertiary: '#EB5171',
+    tertiary: '#FFFFFF',
     quartenary: '#ad42f4',
     purple: '#C691E9',
   },

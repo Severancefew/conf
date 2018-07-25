@@ -7,10 +7,8 @@ import {
   Appear,
   Text as SpectacleText,
   Image,
-  CodePane,
 } from 'spectacle';
-import { Button } from '@alicantoio/ui-kit';
-import { ButtonPlayGround } from './ButtonPlayground';
+import CodeSlide from 'spectacle-code-slide';
 
 import styled from 'react-emotion';
 
@@ -23,6 +21,7 @@ import composition from '../static/img/frameworks/composition.png';
 import vueLogo from '../static/img/frameworks/vue.svg';
 import angularLogo from '../static/img/frameworks/angular.png';
 import reactLogo from '../static/img/frameworks/react.png';
+import buttons from '../static/img/frameworks/buttons.png';
 
 const Text = styled(SpectacleText)`
   color: white;
@@ -47,16 +46,7 @@ export const Frameworks = () => [
     <Text margin="0 0 50px 0" textColor="tertiary">
       Как пример
     </Text>
-    <CodePane
-      margin="0 0 50px 0"
-      textSize="2rem"
-      bgColor="#292D3E"
-      source={reactExample}
-    />
-    <div style={{ marginBottom: 10 }}>
-      <Button theme="warning" text="Hello world" />
-    </div>
-    <ButtonPlayGround />
+    <Image src={buttons} />
   </Slide>,
   <Slide>
     <Heading textColor="secondary">Что общего?</Heading>
@@ -94,7 +84,7 @@ export const Frameworks = () => [
       <ListItem>документация</ListItem>
     </List>
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={angularLogo} />
   </Slide>,
   <Slide>
@@ -122,7 +112,7 @@ export const Frameworks = () => [
       </Appear>
     </List>
   </Slide>,
-  <Slide>
+  <Slide bgColor="white">
     <Image src={reactLogo} />
   </Slide>,
   <Slide>
@@ -140,20 +130,26 @@ export const Frameworks = () => [
     </List>
   </Slide>,
   <Slide>
+    <Heading>Минусы</Heading>
     <List>
       <ListItem>сильно завязан на js</ListItem>
       <ListItem>JSX</ListItem>
-      <Appear>
-        <CodePane
-          margin="50px 0 50px 0"
-          textSize="2rem"
-          bgColor="#292D3E"
-          source={slidesExample}
-        />
-      </Appear>
     </List>
   </Slide>,
-  <Slide>
+  <CodeSlide
+    color="white"
+    transition={[]}
+    showLineNumbers={false}
+    lang="jsx"
+    code={slidesExample}
+    ranges={[
+      {
+        loc: [0, 6],
+        title: 'Презентация на React',
+      },
+    ]}
+  />,
+  <Slide bgColor="white">
     <Image src={vueLogo} />
   </Slide>,
   <Slide>
@@ -169,9 +165,7 @@ export const Frameworks = () => [
         <ListItem>берет лучшее из angular/react</ListItem>
       </Appear>
       <Appear>
-        <ListItem>
-          поддержка css препроцессоров, изоляции стилей из коробки
-        </ListItem>
+        <ListItem>много чего из коробки</ListItem>
       </Appear>
     </List>
     <Appear>
