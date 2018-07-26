@@ -218,7 +218,7 @@ export const Intro = () => [
 
   <Slide>
     <Heading textColor="secondary" fit>
-      За чем посматривать?
+      За чем мы следим?
     </Heading>
     <List>
       <ListItem>

@@ -60,6 +60,7 @@ export const TypeChecking = () => [
     color="white"
     transition={[]}
     lang="ts"
+    showLineNumbers={false}
     code={typescriptExample}
     ranges={[
       {
