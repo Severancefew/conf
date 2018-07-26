@@ -1,15 +1,15 @@
 {
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "public": true,
-    "node_modules": true,
-    "*.*": true,
-    "src/*.*": true,
-    "config": true,
-    "scripts": true
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/.DS_Store": false,
+    "public": false,
+    "node_modules": false,
+    "*.*": false,
+    "src/*.*": false,
+    "config": false,
+    "scripts": false
   }
 }

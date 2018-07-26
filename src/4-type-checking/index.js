@@ -27,29 +27,33 @@ const old_websites = require(`../static/img/type-check/old_websites.mp4`);
 
 export const TypeChecking = () => [
   <Slide>
-    <Heading>Проверка типов</Heading>
+    <Heading fit>Статическая типизация</Heading>
   </Slide>,
 
   <Slide>
     <Image src={type_joke} />
   </Slide>,
+
+  <Slide>
+    <video width={800} height={600} autoPlay loop src={old_websites} muted />
+  </Slide>,
+
+  <Slide>
+    <Image width={456} height={495} src={nan_joke} />
+  </Slide>,
+
+  <Slide>
+    <Heading fit>Какие решения есть</Heading>
+  </Slide>,
+
   <Slide bgImage={typescript_bg} />,
+
   <Slide>
     <Heading>Что это?</Heading>
     <List>
       <ListItem>надстройка над Javascript</ListItem>
       <ListItem>создан в Microsoft</ListItem>
     </List>
-  </Slide>,
-  <Slide>
-    <Heading>Зачем нам это?</Heading>
-    <Appear>
-      <Image width={456} height={495} src={nan_joke} />
-    </Appear>
-  </Slide>,
-
-  <Slide>
-    <video width={800} height={600} autoPlay loop src={old_websites} muted />
   </Slide>,
 
   <CodeSlide
@@ -82,21 +86,11 @@ export const TypeChecking = () => [
   <Slide>
     <Heading>Минусы</Heading>
     <List>
-      <Appear>
-        <ListItem>кривая изучения</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>отдельный язык</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>типы не всегда свежие</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>может ошибаться</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>затраты на покрытие</ListItem>
-      </Appear>
+      <ListItem>кривая изучения</ListItem>
+      <ListItem>отдельный язык</ListItem>
+      <ListItem>типы не всегда свежие</ListItem>
+      <ListItem>может ошибаться</ListItem>
+      <ListItem>затраты на покрытие</ListItem>
     </List>
   </Slide>,
   <Slide>
@@ -114,7 +108,6 @@ export const TypeChecking = () => [
   <Slide>
     <Heading fit>Чем полезен?</Heading>
     <List>
-      <ListItem>широкая поддержка языков</ListItem>
       <ListItem>самодокументация</ListItem>
       <ListItem>генерация typescript тайпингов</ListItem>
     </List>

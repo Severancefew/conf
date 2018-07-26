@@ -99,18 +99,10 @@ export const Frameworks = () => [
       Почему не взяли?
     </Heading>
     <List>
-      <Appear>
-        <ListItem>кривая обучения</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>монолит</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>завязан на typescript</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>декораторы</ListItem>
-      </Appear>
+      <ListItem>кривая обучения</ListItem>
+      <ListItem>монолит</ListItem>
+      <ListItem>завязан на typescript</ListItem>
+      <ListItem>декораторы</ListItem>
     </List>
   </Slide>,
   <Slide bgColor="white">
@@ -119,15 +111,9 @@ export const Frameworks = () => [
   <Slide>
     <Heading fit>Почему мы выбрали?</Heading>
     <List>
-      <Appear>
-        <ListItem>только слой представления</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>огромная экосистема</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>гибкость</ListItem>
-      </Appear>
+      <ListItem>только слой представления</ListItem>
+      <ListItem>огромная экосистема</ListItem>
+      <ListItem>гибкость</ListItem>
     </List>
   </Slide>,
   <Slide>
@@ -156,18 +142,10 @@ export const Frameworks = () => [
   <Slide>
     <Heading fit>Почему стоит взглянуть?</Heading>
     <List>
-      <Appear>
-        <ListItem>кривая обучения</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>документация</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>берет лучшее из angular/react</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>много чего из коробки</ListItem>
-      </Appear>
+      <ListItem>кривая обучения</ListItem>
+      <ListItem>документация</ListItem>
+      <ListItem>берет лучшее из angular/react</ListItem>
+      <ListItem>много чего из коробки</ListItem>
     </List>
     <Appear>
       <Text>Но не такая большая экосистема как у React</Text>
