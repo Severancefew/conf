@@ -193,7 +193,7 @@ export const Intro = () => [
     <Text textColor="secondary">Что изменилось?</Text>
     <List>
       <ListItem>фокус на быстродействии, доступности, безопасности</ListItem>
-      <ListItem>инструменты стали круче и легче</ListItem>
+      <ListItem>workflow стал проще и круче</ListItem>
       <ListItem>PWA уже не просто рекоммендация</ListItem>
       <ListItem>ждем популярности WASM</ListItem>
     </List>
@@ -207,12 +207,8 @@ export const Intro = () => [
       <Image src={t_shaped} />
     </Appear>
     <List>
-      <Appear>
-        <ListItem>Deep expertise in one area</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>Cross-domain generalist</ListItem>
-      </Appear>
+      <ListItem>Deep expertise in one area</ListItem>
+      <ListItem>Cross-domain generalist</ListItem>
     </List>
   </Slide>,
 

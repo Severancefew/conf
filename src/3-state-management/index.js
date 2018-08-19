@@ -123,4 +123,21 @@ export const StateManagement = () => [
       { loc: [32, 35] },
     ]}
   />,
+  <Slide>
+    <Heading>Бонусом</Heading>
+    <List>
+      <ListItem>ленивые вычисления</ListItem>
+      <ListItem>reaction</ListItem>
+    </List>
+  </Slide>,
+  <Slide>
+    <Heading>Минусы</Heading>
+    <List>
+      <ListItem>все в observer</ListItem>
+      <ListItem>инструменты разработчика</ListItem>
+      <ListItem>нет архитектуры</ListItem>
+      <ListItem>магия под капотом</ListItem>
+      <ListItem>тяжело дебажить</ListItem>
+    </List>
+  </Slide>,
 ];
